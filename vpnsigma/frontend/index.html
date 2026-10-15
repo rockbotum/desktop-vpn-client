@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/wails.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <link rel="stylesheet" href="/style.css"/>
+    <title>SigmaVPN</title>
+</head>
+<body>
+<!-- Fixed full-bleed background layer (avoids background-attachment:fixed, which
+     is broken in iOS WKWebView). The image swaps to a portrait crop on mobile. -->
+<div class="bg" aria-hidden="true"></div>
+
+<main class="container">
+    <h1 class="title">SigmaVPN</h1>
+    <p class="subtitle">Учебный VPN-клиент</p>
+
+    <section class="greet" aria-label="Управление подключением">
+        <p id="status" role="status" aria-live="polite" class="status-disconnected">Disconnected</p>
+
+        <div class="input-box">
+            <button id="connect-btn" type="button" class="btn">Connect</button>
+            <button id="disconnect-btn" type="button" class="btn">Disconnect</button>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
